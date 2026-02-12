@@ -1,0 +1,127 @@
+
+:root {
+  --bg: #cdcdcd;
+  --text: #222;
+  --card-bg: #b2b2b2;
+  --accent: #4a90e2;
+  --border: #e0e0e0;
+}
+
+body.dark {
+  --bg: #1a1a1a;
+  --text: #d6d6d6;
+  --card-bg: #2a2a2a;
+  --accent: #7ab8ff;
+  --border: #444;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 20px;
+  transition: background 0.3s, color 0.3s;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    
+}
+
+#back-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 16px;
+  background: var(--card-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.3s, color 0.3s, border 0.3s, transform 0.15s;
+}
+
+#back-button:hover {
+  background: var(--accent);
+  color: white;
+  transform: translateY(-2px);
+}
+
+#back-button.hidden {
+  display: none;
+}
+
+
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, border 0.3s;
+}
+
+
+section {
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: background 0.3s, border 0.3s;
+}
+
+.hidden {
+  display: none;
+}
+
+#breed-list {
+  list-style: none;
+  padding: 0;
+}
+
+#breed-list li {
+  padding: 10px 12px;
+  margin-bottom: 6px;
+  background: var(--bg);
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  transition: background 0.2s, transform 0.1s;
+}
+
+#breed-list li:hover {
+  background: var(--accent);
+  color: white;
+  transform: translateY(-2px);
+}
+
+
+#breed-details p {
+  margin: 6px 0;
+}
+
+
+#facts p,
+#groups p {
+  background: var(--bg);
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  margin-bottom: 8px;
+}
