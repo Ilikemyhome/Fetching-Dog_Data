@@ -35,7 +35,7 @@ This project emphasizes modular code structure, reusable components, and beginne
 - Responsive UI with centered layout and clean spacing
 
 
-##Project Structure
+## Project Structure
 
     /project
     │── index.html
