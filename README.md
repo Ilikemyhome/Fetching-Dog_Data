@@ -37,7 +37,26 @@ This project emphasizes modular code structure, reusable components, and beginne
 
 ##Project Structure
 
+    /project
+    │── index.html
+    │── README.md
+    │── /css
+    │     └── styles.css
+    │── /js
+    │     ├── /api
+    │     |     └── breeds.js 
+    │     |     └── breedDetails.js 
+    │     |      └── facts.js 
+    │     |     └── groups.js 
+    │     ├── /ui
+    │     |     └── renderBreedDetails.js
+    │     |     └── renderBreed.js
+    │     |     └── renderFacts.js
+    │     |     └── renderGroups.js
+    │     └── main.js
+    
 
+ 
 
 ## How It Works
 1. Fetching Breeds
