@@ -35,7 +35,7 @@ This project emphasizes modular code structure, reusable components, and beginne
 - Responsive UI with centered layout and clean spacing
 
 
-##Project Structure
+## Project Structure
 
     /project
     │── index.html
@@ -76,3 +76,36 @@ The app fetches all breed groups and displays them in a simple UI section.
 
 - Open index.html in your browser
 - No build tools or API keys required
+
+##  Testing
+Dog Explorer includes a set of conceptual test cases designed to validate API behavior, UI rendering, and error handling. These test cases demonstrate how the app should behave under normal conditions and edge scenarios.
+
+## Normal Test Cases
+1. Load All Breeds Successfully
+- Input: App loads /api/breeds.js on page load
+- Expected Result: Breed list renders with all available breeds; no errors in console
+- Purpose: Confirms API connectivity and successful DOM rendering
+2. Display Breed Details
+- Input: User clicks a breed from the list
+- Expected Result: renderBreedDetails.js displays name, image, temperament, lifespan, and group
+- Purpose: Ensures detail view loads correctly and UI updates as expected
+3. Generate Random Dog Fact
+- Input: User clicks “Generate Fact” button
+- Expected Result: A new fact appears in the facts section
+- Purpose: Validates /api/facts.js and renderFacts.js integration
+
+## Edge Test Cases
+4. API Returns Empty Breed List
+- Input: Mock API returns []
+- Expected Result: UI displays a friendly “No breeds available” message
+- Purpose: Ensures graceful handling of empty data
+5. Breed Details Missing Fields
+- Input: API returns a breed object missing temperament or image
+- Expected Result: UI displays fallback text or placeholder image
+- Purpose: Confirms robustness against incomplete API data
+6. Network Error When Fetching Facts
+- Input: Simulate failed fetch request
+- Expected Result: Error message appears; UI does not break
+- Purpose: Validates error handling in /api/facts.js
+
+
